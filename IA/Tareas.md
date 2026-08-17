@@ -1,4 +1,4 @@
-# Modelo del Problema de Transporte
+# Tarea 1) Modelo del Problema de Transporte
 
 El **Problema de Transporte** consiste en determinar la forma óptima de distribuir un bien homogéneo desde un conjunto de **orígenes** (fábricas, plantas, centros de producción) hacia un conjunto de **destinos** (bodegas, clientes, centros de consumo), minimizando el costo total de transporte, respetando la disponibilidad de cada origen y los requerimientos de cada destino.
 
@@ -92,17 +92,26 @@ $$
 ## Modelo Completo (resumen)
 
 $$
-\begin{aligned}
-\min \quad & Z = \sum_{i=1}^{m} \sum_{j=1}^{n} c_{ij} \, x_{ij} \\[4pt]
-\text{s.a.} \quad & \sum_{j=1}^{n} x_{ij} \leq a_i, & \forall i = 1,\dots,m \\[4pt]
-& \sum_{i=1}^{m} x_{ij} \geq b_j, & \forall j = 1,\dots,n \\[4pt]
-& x_{ij} \geq 0, & \forall i,j
-\end{aligned}
+\min \; Z = \sum_{i=1}^{m} \sum_{j=1}^{n} c_{ij} \, x_{ij}
+$$
+
+sujeto a:
+
+$$
+\sum_{j=1}^{n} x_{ij} \leq a_i \qquad \forall i = 1,\dots,m
+$$
+
+$$
+\sum_{i=1}^{m} x_{ij} \geq b_j \qquad \forall j = 1,\dots,n
+$$
+
+$$
+x_{ij} \geq 0 \qquad \forall i,j
 $$
 
 ---
 
-# Modelo de Generación de Columnas: Problema de Corte de Stock (Cutting Stock Problem)
+# Tarea 2) Modelo de Generación de Columnas: Problema de Corte de Stock (Cutting Stock Problem)
 
 El **Problema de Corte de Stock** (Cutting Stock Problem, formulación de **Gilmore-Gomory**, 1961) es uno de los ejemplos clásicos y originales con el que nació la técnica de Generación de Columnas.
 
